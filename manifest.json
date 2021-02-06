@@ -1,6 +1,6 @@
 {
-  "name": "Getting Started Example",
-  "description": "Build an Extension!",
+  "name": "XSS/Ad blocker",
+  "description": "Project assignment for CS741",
   "version": "1.0",
   "manifest_version": 2,
   "background": {
