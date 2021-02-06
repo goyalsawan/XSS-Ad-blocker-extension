@@ -6,3 +6,9 @@ Components:
 3.) UI.html : The source code for a simple UI providing Enabling and Disabling functionalities for both the components.
 4.) UI.js : Content script which communicates User interaction to the background script.
 5.) Images : Folder containing icons for extension.
+
+Steps to install:
+1.) Download the zip and extract.
+2.) Open Chrome > manage extensions.
+3.) Toggle developer mode on.
+4.) Load unpacked > select extension folder and you are good to go.
