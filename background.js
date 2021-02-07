@@ -1,10 +1,10 @@
-var XSS_blocker = true;
+var XSS_blocker = true;                              
 var Ad_blocker = true
 chrome.webRequest.onBeforeRequest.addListener(
   function(details) {
     // console.log(JSON.stringify(details));
    if (XSS_blocker) {
-    var regex = "<.*?>"
+    var regex = "<.*?>"                                // assuming no legitimate request will contain HTML code.
     if (details.method == "POST"){
       var data = details.requestBody.formData.data;
       // console.log(data);
@@ -27,7 +27,7 @@ chrome.webRequest.onBeforeRequest.addListener(
     }     
    }
   },
-  {urls: ["https://www.cse.iitb.ac.in/~surajyadav/xss/xss_test.php*"]},
+  {urls: ["https://www.cse.iitb.ac.in/~surajyadav/xss/xss_test.php*"]}, 
   ["requestBody","blocking"]
 );
 chrome.webRequest.onBeforeRequest.addListener(
@@ -35,6 +35,6 @@ chrome.webRequest.onBeforeRequest.addListener(
     if (Ad_blocker) {
       return {cancel:true};
     }
-  },{urls: blocked_ads},
+  },{urls: blocked_ads},              //blocked_ads variable defined in blocked_ads.js contains url list of all the advertisements.
   ["blocking"]
 );
