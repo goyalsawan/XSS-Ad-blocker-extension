@@ -1,4 +1,5 @@
 window.onload = function() {
+    // update() updates the popup according to current state
     function update() {
         var XSS_blocker = chrome.extension.getBackgroundPage().XSS_blocker;
         document.getElementById('XSS_toggle').value = XSS_blocker ? 'Disable' : 'Enable';

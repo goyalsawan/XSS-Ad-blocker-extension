@@ -1,10 +1,12 @@
-var XSS_blocker = true;                              
+// variables to track current state(Enabled/Disabled) for blockers.
+var XSS_blocker = true;                               
 var Ad_blocker = true
 chrome.webRequest.onBeforeRequest.addListener(
   function(details) {
     // console.log(JSON.stringify(details));
    if (XSS_blocker) {
-    var regex = "<.*?>"                                // assuming no legitimate request will contain HTML code.
+     // assuming no legitimate request will contain HTML code. This regex will block all HTML input. 
+    var regex = "<.*?>"                               
     if (details.method == "POST"){
       var data = details.requestBody.formData.data;
       // console.log(data);
@@ -16,7 +18,8 @@ chrome.webRequest.onBeforeRequest.addListener(
       }
     if (details.method == "GET"){
       var url = details.url;
-      var reg = new RegExp("data=.*");
+      //extraction of input data
+      var reg = new RegExp("data=.*");          
       var val = reg.exec(url)[0].split('=')[1];
       var decoded = decodeURIComponent(val);
       // console.log(decoded);
