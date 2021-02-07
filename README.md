@@ -7,6 +7,7 @@ Components:
 3.) UI.html : The source code for a simple UI providing Enabling and Disabling functionalities for both the components.
 4.) UI.js : Content script which communicates User interaction to the background script.
 5.) Images : Folder containing icons for extension.
+6.) blocked_ads.js: This file includes urls of most common advertisements to block. 
 
 Steps to install:
 1.) Download the zip and extract.
