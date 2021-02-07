@@ -1,5 +1,6 @@
 # XSS-Ad-blocker-extension
 Description: This is a chrome extension adding XSS / Ad blocking functionalities. After installation one can control whether to disable either XSS/Ad blocker via simple popup UI. Extension will be enabled by default after installation. 
+
 Components:
 1.) manifest.json : This is the most important and manager of all other files. Any functionalities to the extension can be enabled or disabled from here.
 2.) background.js : This script runs for the lifetime of the extension. All request listeners and their functions are added here.
