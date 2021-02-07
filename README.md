@@ -14,3 +14,9 @@ Steps to install:
 2.) Open Chrome > manage extensions.
 3.) Toggle developer mode on.
 4.) Load unpacked > select extension folder and you are good to go.
+
+TEAM DETAILS:
+1.) Sawan Kumar Goyal (180110071)
+2.) Sidharth Naik (160050113)
+3.) Sajith Menon (203190025)
+4.) Sreyas Raghavan (170050088)
